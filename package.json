@@ -1,11 +1,11 @@
 {
   "name": "achechi15",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "My introduction Card",
   "main": "card.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node card.js" 
+    "start": "node card.js"
   },
   "type": "module",
   "repository": {
