@@ -1,9 +1,8 @@
-const boxen = require('boxen');
-const chalk = require('chalk');
-const inquirer = require('inquirer');
-const clear = require('clear');
-const open = require('open');
-const { default: Choices } = require('inquirer/lib/objects/choices');
+import boxen from 'boxen';
+import chalk from 'chalk';
+import inquirer from 'inquirer';
+import clear from 'clear';
+import open from 'open';
 
 clear();
 
@@ -16,9 +15,9 @@ const question = [{
     choices: [
         {
             // Use chalk to style headers
-            name: `Toss an ${chalk.bold("email")}?`,
+            name: `Toss an ${chalk.magenta.bold("email")}?`,
             value: () => {
-                open("mailto:example@example.com");
+                open("mailto:amoncal@upv.edu.es");
                 console.log("\nLooking forward to hearing your message and replying to you!\n");
             }
         },
@@ -33,22 +32,20 @@ const question = [{
 
 
 const data = {
-    name: chalk.bold.green("                     Alexis Montalvo"),
+    name: chalk.bold.blue("                     Alexis Montalvo"),
     handle: chalk.white("@achechi15"),
-    fact: chalk.hex('#B10000')('I like to spend my time learning something new'),
-    twitter: chalk.hex('#00A1D9')("https://twitter.com/xdIdontHaveOne"),
+    fact: chalk.cyan('I like to spend my time learning something new'),
+    instagram: chalk.hex('#00A1D9')("https://www.instagram.com/amon.c_/"),
     github: chalk.hex('#787878')("https://github.com/achechi15"),
-    dev: chalk.hex('#330093')("https://dev.to/IdontHaveOne"),
-    dribbble: chalk.hex('#AB009C')("https://dribbble.com/IdontHaveOne"),
+    linkedin: chalk.hex('#AB009C')("https://www.linkedin.com/in/alexis-montalvo-210b67246/"),
     website: chalk.hex('#00AB9E')("https://nextjs-blog-seven-eta-26.vercel.app/"),
-    npx: chalk.hex('#A1AB00')("npx harsh"),
+    npx: chalk.hex('#A1AB00')("npx achechi15"),
 
-    labelFact: chalk.hex('#FF6262').bold("          Fun Fact:"),
-    labelTwitter: chalk.hex('#629DFF').bold("        Twitter:"),
-    labelGitHub: chalk.hex('#9E9E9E').bold("         GitHub:"),
-    labelDev: chalk.hex('#A959FF').bold("           Dev:"),
-    labelDribbble: chalk.hex('#F259FF').bold("       Dribbble:"),
-    labelWebsite: chalk.hex('#59FFC8').bold("        Website:"),
+    labelFact: chalk.cyan.bold("  Fun Fact:"),
+    labelInstagram: chalk.hex('#629DFF').bold(" Instagram:"),
+    labelGitHub: chalk.hex('#9E9E9E').bold("    GitHub:"),
+    labelLinkedin: chalk.hex('#F259FF').bold("  LinkedIn:"),
+    labelWebsite: chalk.hex('#59FFC8').bold("   Website:"),
     labelCard: chalk.hex('#FFF976').bold("                  Card:")
 }
 
@@ -59,23 +56,22 @@ const me = boxen(
         ``,
         `${data.labelFact}  ${data.fact}`,
         ``,
-        `${data.labelTwitter}  ${data.twitter}`,
+        `${data.labelInstagram}  ${data.instagram}`,
         `${data.labelGitHub}  ${data.github}`,
-        `${data.labelDev}  ${data.dev}`,
-        `${data.labelDribbble}  ${data.dribbble}`,
+        `${data.labelLinkedin}  ${data.linkedin}`,
         `${data.labelWebsite}  ${data.website}`,
         ``,
         `${data.labelCard}  ${data.npx}`,
         ``,
         `${chalk.bold(
-            "Hi there! I'm Harsh, I'm a passionate MERN stack " 
+            "Hi there! I'm Alexis Montalvo, I'm a passionate CS + Economics " 
         )}`,
-        `${chalk.bold("developer and web designer from India, and have a ")}`,
+        `${chalk.bold("Student from Spain. My hobbies are learning about the ")}`,
         `${chalk.bold(
-            "hobby for creating beautiful, cool, and responsive "
+            "financial system, analise the accounting of big companies and "
         )}`,
         `${chalk.bold(
-            "web apps. Toss me an email if you want to collab!"
+            "developing software. Toss me an email if you want to collab!"
         )}`
     ].join("\n"),
     {
@@ -89,4 +85,12 @@ const me = boxen(
 
 console.log(me);
 
-prompt(questions).then(answer => answer.action());
+const tip = [
+    `Tip: Try ${chalk.yellowBright.bold(
+        "cmd/ctrl + click"
+    )} on the links above`,
+    '',
+].join("\n");
+console.log(tip)
+
+prompt(question).then(answer => answer.action());
