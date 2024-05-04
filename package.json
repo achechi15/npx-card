@@ -3,6 +3,9 @@
   "version": "6.0.0",
   "description": "A personal card for Alexis Montalvo (@achechi15)",
   "main": "card.js",
+  "bin": {
+    "achechi15": "./card.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/achechi15/npx-card.git"
