@@ -1,6 +1,6 @@
 {
   "name": "achechi15",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "description": "A personal card for Alexis Montalvo (@achechi15)",
   "main": "card.js",
   "bin": {
