@@ -68,7 +68,7 @@ const me = boxen(
         )}`,
         `${chalk.bold("Student from Spain. My hobbies are learning about the ")}`,
         `${chalk.bold(
-            "financial system, analise the accounting of big companies and "
+            "financial system, analysing the accounting of big companies and "
         )}`,
         `${chalk.bold(
             "developing software. Toss me an email if you want to collab!"
