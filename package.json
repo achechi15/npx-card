@@ -4,13 +4,15 @@
   "description": "My introduction Card",
   "main": "card.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node card.js"
+    "dev": "node card.js",
+    "run": "node card.js",
+    "start": "node card.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "achechi15"
+    "url": "https://github.com/achechi15/npx-card"
   },
   "author": "achechi15",
   "license": "ISC",
