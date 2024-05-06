@@ -4,7 +4,7 @@ This is my NPX card
 
 👇 just hit 
 ```bash
-npx anmol
+npx achechi15
 ```
 
 ### SCREENSHOT
